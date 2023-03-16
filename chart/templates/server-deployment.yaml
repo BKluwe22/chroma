@@ -36,7 +36,7 @@ spec:
             - name: CLICKHOUSE_PASSWORD
               value: {{ .Values.clickhouse.auth.password }}
 
-          image: {{ .Values.image.repository }}:{{ .Values.image.tag }} 
+          image: {{ .Values.image.registry }}/{{ .Values.image.repository }}:{{ .Values.image.tag }} 
           name: server
           ports:
             - containerPort: 8000
