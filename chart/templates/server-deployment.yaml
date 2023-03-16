@@ -31,7 +31,12 @@ spec:
               value: {{ .Release.Name }}-clickhouse.default.svc.cluster.local
             - name: CLICKHOUSE_PORT
               value: "8123"
-          image: ghcr.io/chroma-core/chroma:0.3.11
+            - name: CLICKHOUSE_USERNAME
+              value: {{ .Values.clickhouse.auth.username }}
+            - name: CLICKHOUSE_PASSWORD
+              value: {{ .Values.clickhouse.auth.password }}
+
+          image: {{ .Values.image.repository }}:{{ .Values.image.tag }} 
           name: server
           ports:
             - containerPort: 8000
