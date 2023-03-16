@@ -1,0 +1,8 @@
+name: chromadb
+description: Helm Chart for ChromaDB
+version: 0.0.1
+apiVersion: v2
+dependencies:
+- name: clickhouse
+  version: 3.0.7
+  repository: https://charts.bitnami.com/bitnami

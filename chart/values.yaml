@@ -1,0 +1,7 @@
+clickhouse:
+  shards: 1
+  replicaCount: 1 
+  keeper: 
+    enabled: false
+  zookeeper: 
+    enabled: false
