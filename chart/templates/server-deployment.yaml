@@ -28,7 +28,7 @@ spec:
             - name: CHROMA_DB_IMPL
               value: clickhouse
             - name: CLICKHOUSE_HOST
-              value: clickhouse
+              value: http://{{ .Release.Name }}-clickhouse.default.svc.cluster.local
             - name: CLICKHOUSE_PORT
               value: "8123"
           image: ghcr.io/chroma-core/chroma:0.3.11
