@@ -1,8 +1,8 @@
 
 image:
   registry: ""
-  repository: chroma
-  tag: v1
+  repository: ""
+  tag: ""
 
 clickhouse:
   shards: 1
@@ -11,6 +11,6 @@ clickhouse:
     enabled: false
   auth: 
     username: "default"
-    password: "imagiraffe" 
+    password: "insertpassword" 
   zookeeper: 
     enabled: false
