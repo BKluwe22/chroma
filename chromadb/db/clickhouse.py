@@ -58,7 +58,7 @@ class Clickhouse(DB):
         common.set_setting("autogenerate_session_id", False)
         self._conn = clickhouse_connect.get_client(
             host=self._settings.clickhouse_host, 
-            port=int(self._settings.clickhouse_port)
+            port=int(self._settings.clickhouse_port),
             username=self._settings.clickhouse_username, 
             password=self._settings.clickhouse_password
         )
